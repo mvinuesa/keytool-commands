@@ -1,0 +1,20 @@
+# keytool-commands
+
+This projects is used for Keytool commands documentation
+Keytool manages a keystore
+
+## Keytool documentation
+
+* link:https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html[What is Keytool?]
+
+### Add a certificate to a CA certificate store
+
+  $ cd ${JAVA_HOME}/jre/lib/security
+  
+  * list certificates
+  
+  $ keytool -list -keystore cacerts
+  
+  * add certificate
+  
+  $ keytool -keystore cacerts -importcert -alias newCertificate -file newCertificate.cer
